@@ -1,20 +1,21 @@
-import random 
+print("===== DAILY EXPENSE TRACKER=====")
 
-number = random.randint(1,100)
-attempts = 0
+expenses = []
+
+food = float(input("Enter food expense:"))
+travel = float(input("Enter travel expense:"))
+shopping = float(input("Enter shopping expense:"))
 
 
-while True:    
-    guess = int(input("Guess a number between 1 and 100:"))
-    attempts = attempts + 1
-    
-    if guess == number:
-        print("Correct! You win!")
-        print("Your attempts:",attempts)
-        break 
-    elif guess > number:
-        print("Too high! try a smaller number.")
-    else:
-        print("Too low! try a bigger number.")
-    
-    
+expenses.append(food)
+expenses.append(travel)
+expenses.append(shopping)
+
+total = sum(expenses)
+
+
+print("\n=====EXPENSE REPORT=====")
+print("food:",food)
+print("travel:",travel)
+print("Shopping",shopping)
+print("Total expenses:",total)
